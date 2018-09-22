@@ -6,16 +6,16 @@ let mainBoard
 let playerClickCount = 0
 const playerOne = 'x'
 const playerTwo = 'o'
-const winCombos = [
-  ['one', 'two', 'three'],
-  ['four', 'five', 'six'],
-  ['seven', 'eight', 'nine'],
-  ['one', 'four', 'seven'],
-  ['two', 'five', 'eight'],
-  ['three', 'six', 'nine'],
-  ['one', 'five', 'nine'],
-  ['three', 'five', 'seven']
-]
+// const winCombos = [
+//   ['one', 'two', 'three'],
+//   ['four', 'five', 'six'],
+//   ['seven', 'eight', 'nine'],
+//   ['one', 'four', 'seven'],
+//   ['two', 'five', 'eight'],
+//   ['three', 'six', 'nine'],
+//   ['one', 'five', 'nine'],
+//   ['three', 'five', 'seven']
+// ]
 
 const playerOneWinCondition = () => {
   if (mainBoard.one === 'x' && mainBoard.two === 'x' && mainBoard.three === 'x') {
