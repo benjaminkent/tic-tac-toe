@@ -17,6 +17,12 @@ const playerTwo = 'o'
 //   ['three', 'five', 'seven']
 // ]
 
+let checkDraw = () => {
+  if (mainBoard.one && mainBoard.two && mainBoard.three && mainBoard.four && mainBoard.five && mainBoard.six && mainBoard.seven && mainBoard.eight && mainBoard.nine !== '') {
+    document.querySelector('.game-decision').textContent = 'Draw. You both lose!'
+  }
+}
+
 const playerOneWinCondition = () => {
   if (mainBoard.one === 'x' && mainBoard.two === 'x' && mainBoard.three === 'x') {
     document.querySelector('.game-decision').textContent = 'Player One Wins!'
@@ -85,16 +91,10 @@ const playerTwoWinCondition = () => {
   }
 }
 
-let checkDraw = () => {
-  if (mainBoard.one && mainBoard.two && mainBoard.three && mainBoard.four && mainBoard.five && mainBoard.six && mainBoard.seven && mainBoard.eight && mainBoard.nine !== '') {
-    document.querySelector('.game-decision').textContent = 'Draw. You both lose!'
-  }
-}
-
 const checkWinner = () => {
+  checkDraw()
   playerOneWinCondition()
   playerTwoWinCondition()
-  checkDraw()
 }
 
 let box = document.querySelectorAll('.box')
@@ -138,3 +138,5 @@ const main = () => {
 }
 
 document.addEventListener('DOMContentLoaded', main)
+
+
